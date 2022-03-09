@@ -11,6 +11,10 @@ export default function Filme(){
     const [filme, setFilme] = useState([]);
     const [loading, setLoading] = useState(true)
 
+
+    //----------------------------------------------------------------------------------
+
+
     useEffect(()=>{
         
         async function loadFilme(){
@@ -28,6 +32,35 @@ export default function Filme(){
         loadFilme();
 
     }, [id, navigate])
+
+
+    //----------------------------------------------------------------------------------
+
+
+    function favoritarFilme(){
+
+        const listaFilmesFavoritos = localStorage.getItem('filmes');
+
+        let filmesFavoritos = JSON.parse(listaFilmesFavoritos) || [];
+
+        //Verificar se o filme já está nos favoritos
+        const verificar = filmesFavoritos.some((filmeAtual) => filmeAtual.id === filme.id)
+        if(verificar){
+            alert('Este filme já está em seus favoritos.');
+            return;
+        }
+
+        //Adicionar filme ao array de favoritos
+        filmesFavoritos.push(filme);
+        //Adicionar ao localStorage
+        localStorage.setItem('filmes', JSON.stringify(filmesFavoritos))
+        alert('Filme adicionado aos favoritos.')
+
+    };
+
+
+    //----------------------------------------------------------------------------------
+
 
     if(loading){
         return(
@@ -51,7 +84,7 @@ export default function Filme(){
                         Assistir trailer
                     </a>
                 </button>
-                <button onClick={()=>{}}>Adicionar aos favoritos</button>
+                <button onClick={favoritarFilme}>Adicionar aos favoritos</button>
             </div>
 
         </div>
