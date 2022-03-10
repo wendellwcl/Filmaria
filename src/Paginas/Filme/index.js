@@ -76,7 +76,6 @@ export default function Filme(){
             
             <h1>{filme.nome}</h1>
             <img src={filme.foto} alt={filme.nome}/>
-            <h3>Sinopse</h3>
             <p>{filme.sinopse}</p>
             <div className='btns'>
                 <button>

@@ -1,0 +1,54 @@
+#meusFilmes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 15px 0;
+    text-align: center;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    padding: 10px;
+    list-style: none;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li:nth-child(odd){
+    background-color: rgba(100, 100, 100, 0.2);
+}
+
+li:nth-child(even){
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+button{
+    background-color: brown;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    transition: .5s;
+}
+
+button:hover{
+    color: #000;
+}
+
+ul li div a{
+    text-decoration: none;
+    color: brown;
+    font-size: 16px;
+    margin-right: 15px;
+}
