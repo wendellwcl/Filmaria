@@ -1,5 +1,6 @@
 import { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './favoritos.css'
 
 export default function Favoritos(){
@@ -30,6 +31,8 @@ export default function Favoritos(){
         setFilmes(filtrarFilmes)
         localStorage.setItem('filmes', JSON.stringify(filtrarFilmes))
 
+        toast.error('Filme removido.')
+
     }
 
 
@@ -41,6 +44,8 @@ export default function Favoritos(){
         <div id='meusFilmes'>
 
             <h1>Lista de favoritos</h1>
+
+            {filmes.length === 0 && <span>Você não possui filmes salvos</span>}
 
             <ul>
 

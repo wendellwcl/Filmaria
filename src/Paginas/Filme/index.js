@@ -2,6 +2,7 @@ import './filme.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../../Services/api.js'
+import { toast } from 'react-toastify';
 
 export default function Filme(){
 
@@ -46,7 +47,7 @@ export default function Filme(){
         //Verificar se o filme já está nos favoritos
         const verificar = filmesFavoritos.some((filmeAtual) => filmeAtual.id === filme.id)
         if(verificar){
-            alert('Este filme já está em seus favoritos.');
+            toast.info('Este filme já está em seus favoritos.');
             return;
         }
 
@@ -54,7 +55,7 @@ export default function Filme(){
         filmesFavoritos.push(filme);
         //Adicionar ao localStorage
         localStorage.setItem('filmes', JSON.stringify(filmesFavoritos))
-        alert('Filme adicionado aos favoritos.')
+        toast.success('Filme adicionado aos favoritos.')
 
     };
 
