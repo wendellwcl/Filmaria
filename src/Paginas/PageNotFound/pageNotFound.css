@@ -1,24 +1,8 @@
-#pageNotFound{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#notFound h2{
+    font-size: 60px;
 }
 
-#pageNotFound h1{
-    font-size: 80px;
-}
-
-#pageNotFound a{
-    text-decoration: none;
-    color: #FFF;
-    background-color: brown;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: .5s;
-}
-
-#pageNotFound a:hover{
-    color: #000;
+#notFound .btn{
+    background-color: var(--cor-principal);
+    border: var(--cor-principal);
 }
