@@ -10,8 +10,7 @@ export default function Rotas(){
 
     return(
 
-        <div className='container'>
-
+        <div className='container-fluid g-0'>
             <Router>
                 <Header/>
                 <Routes>
@@ -21,7 +20,6 @@ export default function Rotas(){
                     <Route path='*' element={<PageNotFound/>}/>
                 </Routes>
             </Router>
-
         </div>
 
     );
