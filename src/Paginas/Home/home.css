@@ -1,42 +1,23 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+article{
+    margin-bottom: 30px;
 }
 
-.listaFilmes{
-    margin: 15px;
-}
-
-.listaFilmes article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFF;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.listaFilmes strong{
-    padding-bottom: 15px;
+article h2{
+    margin: 0;
     font-size: 22px;
-}
-
-.listaFilmes img{
-    width: 800px;
-    max-height: 350px;
-}
-
-.listaFilmes article a{
-    font-size: 25px;
-    text-decoration: none;
-    color: #FFF;
-    background-color: brown;
-    width: 100%;
-    text-align: center;
+    font-weight: bold;
+    background-color: #e6e6e6;
     padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+article a{
+    display: block;
+    width: 100%;
+    background-color: var(--cor-principal);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 0;
     border-radius: 0 0 5px 5px;
 }

@@ -20,22 +20,18 @@ export default function Home(){
 
     return(
 
-        <div className='container'>
-
-            <div className='listaFilmes'>
-
+        <div className='container g-3 g-md-0'>
+            <div className='row pt-3'>
                 {filmes.map((filme) => {
                     return(
-                        <article key={filme.id}>
-                            <strong>{filme.nome}</strong>
-                            <img src={filme.foto} alt={filme.nome}/>
-                            <Link to={`/filme/${filme.id}`}>Acessar</Link>
+                        <article key={filme.id} className='col-12 col-md-6'>
+                            <h2 className='text-center'>{filme.nome}</h2>
+                            <img src={filme.foto} alt={filme.nome} className='img-fluid'/>
+                            <Link to={`/filme/${filme.id}`} className='text-light text-center'>Acessar</Link>
                         </article>
                     );
                 })}
-
             </div>
-
         </div>
 
     );
