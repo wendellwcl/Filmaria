@@ -6,17 +6,31 @@ import './home.css'
 export default function Home(){
 
     const [filmes, setFilmes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
 
         async function loadFilmes(){
-            const resposta = await api.get('r-api/?api=filmes')
-            setFilmes(resposta.data)
+            const resposta = await api.get('r-api/?api=filmes');
+            setFilmes(resposta.data);
+            setLoading(false);
         };
 
         loadFilmes();
 
-    }, [])
+    }, []);
+
+
+    //----------------------------------------------------------------------------------
+
+
+    if(loading){
+        return(
+            <div class="text-center d-flex align-items-center justify-content-center" id='loading'>
+                <div class="spinner-border" role="status"></div>
+            </div>
+        );
+    };
 
     return(
 

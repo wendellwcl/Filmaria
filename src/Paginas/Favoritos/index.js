@@ -6,6 +6,7 @@ import './favoritos.css'
 export default function Favoritos(){
 
     const [filmes, setFilmes] = useState([]);
+    const [loading, setLoading] = useState(true);
 
 
     //---------------------------------------------------------------------------
@@ -15,6 +16,7 @@ export default function Favoritos(){
 
         const listaFavoritos = localStorage.getItem('filmes');
         setFilmes(JSON.parse(listaFavoritos) || []);
+        setLoading(false);
 
     }, []);
 
@@ -38,10 +40,17 @@ export default function Favoritos(){
 
     //---------------------------------------------------------------------------
 
+    if(loading){
+        return(
+            <div class="text-center d-flex align-items-center justify-content-center" id='loading'>
+                <div class="spinner-border" role="status"></div>
+            </div>
+        );
+    };
 
     return(
 
-        <div className='container' id='meusFilmes'>
+        <div className='container'>
             <div className='row text-center'>
                 <h2 className='mt-3 mb-2'>Favoritos</h2>
                 {filmes.length === 0 && <span>Você não possui filmes salvos</span>}

@@ -65,11 +65,11 @@ export default function Filme(){
 
     if(loading){
         return(
-            <div className='container'>
-                <h2 className='text-center p-5'>Carregando...</h2>
+            <div class="text-center d-flex align-items-center justify-content-center" id='loading'>
+                <div class="spinner-border" role="status"></div>
             </div>
-        )
-    }
+        );
+    };
 
     return(
 

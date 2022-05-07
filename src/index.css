@@ -15,3 +15,7 @@ code {
 :root{
   --cor-principal: #A70000;
 }
+
+#loading{
+  height: calc(100vh - 62px);
+}
