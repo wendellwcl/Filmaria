@@ -11,11 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-:root{
-  --cor-principal: #A70000;
-}
-
-#loading{
-  height: calc(100vh - 62px);
-}

@@ -1,4 +1,3 @@
-import './filme.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../../Services/api.js'
@@ -79,7 +78,7 @@ export default function Filme(){
                     <h2 className='text-center mt-3 mb-2'>{filme.nome}</h2>
                     <img src={filme.foto} alt={filme.nome} className='col-12 col-md-9 mb-3'/>
                     <p className='col-12 col-md-10 mb-5 mb-md-3'>{filme.sinopse}</p>
-                    <div className='col-12 d-flex justify-content-evenly'>
+                    <div className='col-12 d-flex justify-content-evenly pb-5'>
                         <a className='btn' target='blank' href={`https://www.youtube.com/results?search_query=${filme.nome} Trailer`}>
                             <i className="bi bi-play-circle-fill me-2"></i>
                             Assistir trailer

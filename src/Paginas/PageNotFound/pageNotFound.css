@@ -4,5 +4,5 @@
 
 #notFound .btn{
     background-color: var(--cor-principal);
-    border: var(--cor-principal);
+    border-color: var(--cor-principal);
 }

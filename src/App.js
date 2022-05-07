@@ -1,4 +1,4 @@
-import './estilo.css'
+import './app.css'
 import Rotas from './rotas.js';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
