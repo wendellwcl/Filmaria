@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './Componentes/Header';
 import Home from './Paginas/Home';
 import Filme from './Paginas/Filme';
@@ -10,7 +10,7 @@ export default function Rotas(){
     return(
 
         <div className='container-fluid g-0'>
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router>
                 <Header/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
