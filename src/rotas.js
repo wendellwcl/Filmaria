@@ -10,7 +10,7 @@ export default function Rotas(){
     return(
 
         <div className='container-fluid g-0'>
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
                 <Header/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
