@@ -13,6 +13,7 @@ export default function Rotas(){
             <Router>
                 <Header/>
                 <Routes>
+                    <Route path='/' element={<Home/>}/>
                     <Route path='/Filmaria' element={<Home/>}/>
                     <Route path='/filme/:id' element={<Filme/>}/>
                     <Route path='/favoritos' element={<Favoritos/>}/>

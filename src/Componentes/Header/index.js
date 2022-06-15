@@ -8,7 +8,7 @@ export default function Header(){
         <header className='container-fluid'>
 
                 <nav className='navbar navbar-dark w-75 m-auto justify-content-between'>
-                    <Link className='navbar-brand' to='/'>
+                    <Link className='navbar-brand' to='/Filmaria'>
                         <i class="bi bi-film me-2"></i>
                         Filmaria
                     </Link>
