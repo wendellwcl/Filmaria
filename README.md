@@ -1,8 +1,9 @@
 # Filmaria
 ## Single-page application
 
-Projeto em **React**, originalmente desenvolvido em um curso e posteriormente lapidado por mim.
-Trata-se de um catálogo de filmes, onde é possivel ações de como exibir detalhes e salvar filmes como favoritos.
+**Projeto acadêmico**
+
+Este projeto trata-se de um catálogo de filmes, onde é possivel ações de como exibir detalhes e salvar filmes como favoritos.
 
 ### Utilizações do projeto:
 * React
